@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 7</title>
+</head>
+<body>
+    <table id="myTable" border="1"> </table>
+    <form action="">
+        <input type="button" onclick="createTable(3, 3)" value="Craete the table">
+    </form>
+
+
+
+
+<script>
+     const table = document.getElementById("myTable");
+
+
+function createTable(rows, columns) {
+    const newTable = document.createElement("table");
+    newTable.setAttribute("border", "1");
+    const newTbody = document.createElement("tbody");
+
+    for (let i = 0; i < rows; i++) {
+        const row = document.createElement("tr");
+
+        for (let j = 0; j < columns; j++) {
+            
+            const cell = document.createElement("td");
+
+          
+            cell.textContent = `Row-${i + 1}, Column-${j + 1}`;
+
+            row.appendChild(cell);
+        }
+
+        newTbody.appendChild(row);
+    }
+
+    newTable.appendChild(newTbody);
+
+    table.innerHTML = "";
+    table.appendChild(newTable);
+}
+</script>
+</body>
+</html>

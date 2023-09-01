@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 4</title>
+  </head>
+  <body>
+    <p>
+      <a
+        id="w3r"
+        type="text/html"
+        hreflang="en-us"
+        rel="nofollow"
+        target="_self"
+      ></a>
+    </p>
+    <button onclick="getAttributes()">click here to get attrutes value</button>
+    <div id="pdiv"></div>
+
+    <script>
+      const getAttr = document.getElementById("w3r");
+      const attrDiv = document.getElementById("pdiv");
+
+      function getAttributes() {
+        const typeAttr = getAttr.getAttribute("type");
+        const hreflangAttr = getAttr.getAttribute("hreflang");
+        const relAttr = getAttr.getAttribute("rel");
+        const targetAttr = getAttr.getAttribute("target");
+
+        attrDiv.innerHTML = `
+                <p>type: ${typeAttr}</p>
+                <p>hreflang: ${hreflangAttr}</p>
+                <p>rel: ${relAttr}</p>
+                <p>target: ${targetAttr}</p>
+            `;
+      };
+    </script>
+  </body>
+</html>

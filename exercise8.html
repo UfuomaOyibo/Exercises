@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 7</title>
+</head>
+<body>
+    <form action="">
+        <select name="" id="mySelect">
+<option value="">Red</option>
+<option value="">Green</option>
+<option value="">Blue</option>
+<option value="">White</option>
+        </select>
+
+        <input type="button" value="Count and Display " onclick="getOptions()">
+    </form>
+
+
+<script>
+function getOptions() {
+    const dropdownList = document.getElementById("mySelect");
+
+const numberOfItems = dropdownList.options.length;
+
+ const listItems = [];
+
+  for (let i = 0; i < numberOfItems; i++) {
+
+    listItems.push(dropdownList.options[i].text);
+  }
+
+ 
+  alert(`There are ${numberOfItems} items in the dropdown list.
+  The list items are: ${listItems}.`);
+   
+   }
+   
+   
+   
+   
+   
+
+</script>
+
+</body>
+</html>
